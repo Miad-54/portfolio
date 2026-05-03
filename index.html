@@ -1,0 +1,2507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miad Bin Mostafiz — IPE & Solution Consultant</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #f8fafc;
+      --navy2: #ffffff;
+      --navy3: #e2e8f0;
+      --blue: #2563eb;
+      --blue2: #3b82f6;
+      --cyan: #06b6d4;
+      --white: #0f172a;
+      --muted: #475569;
+      --border: rgba(37, 99, 235, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.1rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border)
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--white);
+      letter-spacing: 1px
+    }
+
+    .logo span {
+      color: var(--blue)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: .5px;
+      transition: color .2s
+    }
+
+    .nav-links a:hover {
+      color: var(--white)
+    }
+
+    .nav-links a.active {
+      color: var(--white);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 2px
+    }
+
+    .btn-talk {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: .55rem 1.3rem;
+      border-radius: 6px;
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: .5px;
+      transition: background .2s
+    }
+
+    .btn-talk:hover {
+      background: var(--blue2)
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 7rem 5% 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(26, 108, 245, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 108, 245, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -120px;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(26, 108, 245, 0.13) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .hero-glow2 {
+      position: absolute;
+      bottom: -80px;
+      left: 5%;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(0, 198, 255, 0.07) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    /* floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float 6s ease-in-out infinite
+    }
+
+    .orb1 {
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle at 35% 35%, #3d8cff, #0a3080);
+      top: 18%;
+      right: 38%;
+      animation-delay: 0s
+    }
+
+    .orb2 {
+      width: 45px;
+      height: 45px;
+      background: radial-gradient(circle at 35% 35%, #1a6cf5, #061a40);
+      top: 35%;
+      right: 30%;
+      animation-delay: 1.5s
+    }
+
+    .orb3 {
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle at 35% 35%, #00c6ff, #0a3080);
+      top: 55%;
+      right: 42%;
+      animation-delay: 3s
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-18px)
+      }
+    }
+
+    .hero-left {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+      animation: fadeUp .8s ease both
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(26, 108, 245, 0.15);
+      border: 1px solid rgba(26, 108, 245, 0.35);
+      color: var(--blue2);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem
+    }
+
+    .hero-left h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: .6rem;
+      letter-spacing: -1px
+    }
+
+    .hero-left h1 .hi {
+      color: var(--white)
+    }
+
+    .hero-typed-wrap {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+      font-weight: 800;
+      color: var(--blue);
+      min-height: 2.8rem;
+      margin-bottom: 1.4rem;
+      letter-spacing: -0.5px
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--cyan);
+      margin-left: 3px;
+      vertical-align: text-bottom;
+      animation: blink .7s step-end infinite
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0
+      }
+    }
+
+    .hero-desc {
+      color: var(--muted);
+      font-size: .97rem;
+      line-height: 1.8;
+      max-width: 600px;
+      margin-bottom: 2rem
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      padding: .7rem 1.7rem;
+      border-radius: 6px;
+      font-size: .88rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      transition: background .2s;
+      font-family: 'DM Sans', sans-serif
+    }
+
+    .btn-primary:hover {
+      background: var(--blue2)
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: .7rem 1.5rem;
+      border-radius: 6px;
+      font-size: .88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+      font-family: 'DM Sans', sans-serif
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue2)
+    }
+
+    .socials {
+      display: flex;
+      gap: .7rem;
+      margin-top: 1.5rem
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .75rem;
+      transition: all .2s
+    }
+
+    .social-btn:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff
+    }
+
+    .hero-right {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+      animation: fadeUp .8s .2s ease both;
+      opacity: 0;
+      animation-fill-mode: both
+    }
+
+    .hero-img-wrap {
+      width: 360px;
+      height: 420px;
+      position: relative
+    }
+
+    .hero-img-box {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--navy3), #cbd5e1);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center
+    }
+
+    .hero-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem
+    }
+
+    .avatar-big {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff
+    }
+
+    .avatar-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white)
+    }
+
+    .avatar-role {
+      font-size: .8rem;
+      color: var(--muted)
+    }
+
+    .hero-ring {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid rgba(26, 108, 245, 0.25);
+      animation: spin 12s linear infinite
+    }
+
+    .hero-ring2 {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 198, 255, 0.2);
+      animation: spin 8s linear infinite reverse
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 20px;
+      right: -24px;
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .65rem 1rem;
+      font-size: .78rem;
+      color: var(--white);
+      font-weight: 500;
+      min-width: 140px
+    }
+
+    .hero-badge .hb-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 725;
+      color: var(--blue);
+      display: block
+    }
+
+    /* LOGOS STRIP */
+    .strip {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 5%;
+      overflow: hidden
+    }
+
+    .strip-inner {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      white-space: nowrap;
+      animation: scroll 20s linear infinite
+    }
+
+    .strip-item {
+      font-family: 'Syne', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+      opacity: .6
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 6rem 5%;
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .about-left {
+      flex: 1;
+      position: relative
+    }
+
+    .about-img-box {
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--navy3), #cbd5e1);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      height: 460px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative
+    }
+
+    .about-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff
+    }
+
+    .about-ring {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 160px;
+      height: 160px;
+      animation: spin 8s linear infinite;
+      opacity: 0.35;
+    }
+
+    .about-ring svg {
+      width: 100%;
+      height: 100%;
+      fill: #fff;
+    }
+
+    .about-ring-inner {
+      display: none;
+    }
+
+    .about-right {
+      flex: 1
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(26, 108, 245, 0.12);
+      border: 1px solid rgba(26, 108, 245, 0.3);
+      color: var(--blue2);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: .3rem .8rem;
+      border-radius: 4px;
+      margin-bottom: 1rem
+    }
+
+    .section-h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.5px
+    }
+
+    .section-h2 .accent {
+      color: var(--blue)
+    }
+
+    .section-p {
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.8;
+      margin-bottom: 1.8rem
+    }
+
+    .mini-stats {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap
+    }
+
+    .mini-stat {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .9rem 1.3rem;
+      text-align: center;
+      min-width: 90px
+    }
+
+    .ms-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--blue)
+    }
+
+    .ms-lbl {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 2px
+    }
+
+    /* EXPERIENCE */
+    .experience {
+      padding: 5rem 5%;
+      background: var(--navy2);
+      position: relative
+    }
+
+    .experience::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(26, 108, 245, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 108, 245, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem
+    }
+
+    .exp-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      position: relative;
+      z-index: 1
+    }
+
+    .exp-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color .3s, transform .3s;
+      flex: 1 1 280px;
+      max-width: 380px
+    }
+
+    .exp-card:hover {
+      border-color: rgba(26, 108, 245, 0.5);
+      transform: translateY(-4px)
+    }
+
+    .exp-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: .8rem;
+      flex-wrap: wrap;
+      gap: .5rem
+    }
+
+    .exp-role {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white)
+    }
+
+    .exp-co {
+      font-size: .8rem;
+      color: var(--blue2);
+      font-weight: 500;
+      margin-top: 2px
+    }
+
+    .exp-dt {
+      font-size: .72rem;
+      background: rgba(26, 108, 245, 0.12);
+      color: var(--blue2);
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(26, 108, 245, 0.25);
+      white-space: nowrap
+    }
+
+    .exp-desc {
+      font-size: .83rem;
+      color: var(--muted);
+      line-height: 1.7
+    }
+
+    .exp-line {
+      width: 30px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      border-radius: 2px;
+      margin-bottom: .9rem
+    }
+
+    /* SKILLS */
+    .skills-sec {
+      padding: 5rem 5%
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem
+    }
+
+    .skill-group {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem;
+      flex: 1 1 220px;
+      max-width: 320px
+    }
+
+    .sg-head {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin-bottom: 1rem
+    }
+
+    .sg-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      color: #fff;
+      flex-shrink: 0
+    }
+
+    .sg-title {
+      font-family: 'Syne', sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .5px
+    }
+
+    .sg-items {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem
+    }
+
+    .sg-item {
+      font-size: .82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .sg-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex-shrink: 0
+    }
+
+    /* RESEARCH */
+    .research-sec {
+      padding: 5rem 5%;
+      background: var(--navy2);
+      position: relative
+    }
+
+    .research-sec::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(26, 108, 245, 0.06) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none
+    }
+
+    .res-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      position: relative;
+      z-index: 1
+    }
+
+    .res-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: transform .3s;
+      flex: 1 1 320px;
+      max-width: 480px
+    }
+
+    .res-card:hover {
+      transform: translateY(-4px)
+    }
+
+    .res-badge {
+      display: inline-block;
+      background: rgba(26, 108, 245, 0.12);
+      color: var(--blue2);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: .8rem
+    }
+
+    .res-title {
+      font-family: 'Syne', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.45;
+      margin-bottom: .7rem
+    }
+
+    .res-desc {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.7
+    }
+
+    /* PROJECTS */
+    .projects-sec {
+      padding: 5rem 5%
+    }
+
+    .proj-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem
+    }
+
+    .proj-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform .3s, border-color .3s;
+      flex: 1 1 260px;
+      max-width: 380px
+    }
+
+    .proj-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(26, 108, 245, 0.5)
+    }
+
+    .proj-thumb {
+      height: 140px;
+      background: linear-gradient(135deg, #e0e7ff, #bfdbfe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      position: relative;
+      overflow: hidden
+    }
+
+    .proj-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(255, 255, 255, 0.5))
+    }
+
+    .proj-body {
+      padding: 1.2rem
+    }
+
+    .proj-type {
+      font-size: .7rem;
+      color: var(--blue2);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: .4rem
+    }
+
+    .proj-name {
+      font-family: 'Syne', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: .6rem
+    }
+
+    .proj-desc {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: .9rem
+    }
+
+    .proj-tags {
+      display: flex;
+      gap: .4rem;
+      flex-wrap: wrap
+    }
+
+    .proj-tag {
+      font-size: .7rem;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: rgba(26, 108, 245, 0.1);
+      color: var(--blue2);
+      border: 1px solid rgba(26, 108, 245, 0.2);
+      font-weight: 500
+    }
+
+    .proj-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--blue);
+      border-radius: 50%;
+      color: #fff;
+      font-size: .8rem;
+      margin-top: .8rem;
+      cursor: pointer;
+      transition: background .2s
+    }
+
+    .proj-arrow:hover {
+      background: var(--blue2)
+    }
+
+    /* CERTIFICATIONS */
+    .cert-sec {
+      padding: 5rem 5%;
+      background: var(--navy2)
+    }
+
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem
+    }
+
+    .cert-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem;
+      display: flex;
+      gap: .9rem;
+      align-items: flex-start;
+      transition: border-color .3s;
+      flex: 1 1 260px;
+      max-width: 380px
+    }
+
+    .cert-card:hover {
+      border-color: rgba(26, 108, 245, 0.45)
+    }
+
+    .cert-ico {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+      flex-shrink: 0;
+      color: #fff
+    }
+
+    .cert-name {
+      font-family: 'Syne', sans-serif;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 3px
+    }
+
+    .cert-desc {
+      font-size: .77rem;
+      color: var(--muted);
+      line-height: 1.55
+    }
+
+    /* CONTACT */
+    .contact-sec {
+      padding: 5.5rem 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .contact-sec::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(26, 108, 245, 0.09) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      max-width: 960px;
+      margin: 2.5rem auto 0;
+      position: relative;
+      z-index: 1
+    }
+
+    .cc {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      text-align: left;
+      transition: border-color .3s;
+      flex: 1 1 250px;
+      max-width: 400px
+    }
+
+    .cc:hover {
+      border-color: rgba(26, 108, 245, 0.45)
+    }
+
+    .cc-ico {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      flex-shrink: 0;
+      color: #fff
+    }
+
+    .cc-lbl {
+      font-size: .7rem;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: .5px
+    }
+
+    .cc-val {
+      font-size: .82rem;
+      color: var(--white);
+      font-weight: 500;
+      word-break: break-all
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem
+    }
+
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--white)
+    }
+
+    .footer-logo span {
+      color: var(--blue)
+    }
+
+    footer p {
+      font-size: .78rem;
+      color: var(--muted)
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+      padding: 1rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: var(--navy2);
+      width: 100%;
+      max-width: 650px;
+      max-height: 85vh;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-box {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--muted);
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+      padding: 0.2rem;
+    }
+
+    .modal-close:hover {
+      color: var(--blue2);
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .modal-body h4 {
+      font-family: 'Syne', sans-serif;
+      color: var(--white);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+    }
+
+    .modal-body th,
+    .modal-body td {
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    .modal-body th {
+      background: var(--navy3);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .modal-body tr:nth-child(even) {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .card-interactive {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card-interactive::after {
+      content: 'Click for details';
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 0.65rem;
+      color: var(--blue2);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .card-interactive:hover::after {
+      opacity: 1;
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--white);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ===== TABLET (max 992px) ===== */
+    @media (max-width: 992px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 7rem 5% 3rem;
+      }
+
+      .hero-left {
+        max-width: 100%;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-img-wrap {
+        width: 280px;
+        height: 340px;
+        margin: 0 auto;
+      }
+
+      .hero-badge {
+        right: -10px;
+      }
+
+      .about {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 4rem 5%;
+      }
+
+      .about-img-box {
+        height: 340px;
+      }
+
+      .exp-card,
+      .proj-card,
+      .res-card,
+      .cert-card,
+      .skill-group {
+        max-width: 100%;
+      }
+    }
+
+    /* ===== MOBILE NAV + LAYOUT (max 768px) ===== */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 1.2rem;
+        transition: right 0.35s ease;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+        z-index: 105;
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+      }
+
+      .btn-talk {
+        display: none;
+      }
+
+      nav {
+        padding: 0.9rem 5%;
+      }
+
+      .hero {
+        padding: 6rem 5% 2.5rem;
+        min-height: auto;
+      }
+
+      .hero-img-wrap {
+        width: 220px;
+        height: 280px;
+      }
+
+      .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.8rem;
+        right: -5px;
+        bottom: 10px;
+      }
+
+      .hero-ring {
+        width: 90px;
+        height: 90px;
+        bottom: -14px;
+        left: -14px;
+      }
+
+      .hero-ring2 {
+        width: 60px;
+        height: 60px;
+        top: -10px;
+        right: -10px;
+      }
+
+      .orb1 {
+        width: 50px;
+        height: 50px;
+      }
+
+      .orb2 {
+        width: 30px;
+        height: 30px;
+      }
+
+      .orb3 {
+        width: 20px;
+        height: 20px;
+      }
+
+      .about {
+        padding: 3.5rem 5%;
+      }
+
+      .about-img-box {
+        height: 280px;
+      }
+
+      .about-left {
+        display: none;
+      }
+
+      .about-ring {
+        width: 120px;
+        height: 120px;
+      }
+
+      .about-ring-inner {
+        width: 96px;
+        height: 96px;
+      }
+
+      .experience,
+      .skills-sec,
+      .research-sec,
+      .projects-sec,
+      .cert-sec,
+      .contact-sec {
+        padding: 3.5rem 5%;
+      }
+
+      .section-h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+      }
+
+      .exp-grid,
+      .proj-grid,
+      .res-grid,
+      .skills-grid,
+      .cert-grid,
+      .contact-grid,
+      .edu-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .exp-card,
+      .proj-card,
+      .res-card,
+      .cert-card,
+      .skill-group,
+      .cc {
+        width: 100%;
+        max-width: 500px;
+        flex: none;
+      }
+
+      /* Override inline styles on extracurricular/hobbies cards */
+      .proj-grid>.cert-card,
+      .edu-grid>.res-card {
+        flex: none !important;
+        max-width: 500px !important;
+        width: 100%;
+      }
+
+      .modal-box {
+        max-width: 95%;
+        max-height: 90vh;
+      }
+
+      .modal-body img {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 1rem 0 !important;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6rem;
+        padding: 1.2rem 5%;
+      }
+    }
+
+    /* ===== SMALL PHONES (max 480px) ===== */
+    @media (max-width: 480px) {
+      .hero {
+        padding: 5.5rem 4% 2rem;
+      }
+
+      .hero-left h1 {
+        font-size: 2rem;
+      }
+
+      .hero-typed-wrap {
+        font-size: 1.3rem;
+        min-height: 2rem;
+      }
+
+      .hero-desc {
+        font-size: 0.88rem;
+      }
+
+      .hero-img-wrap {
+        width: 190px;
+        height: 240px;
+      }
+
+      .avatar-big {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+
+      .section-tag {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.65rem;
+      }
+
+      .section-h2 {
+        font-size: 1.4rem;
+      }
+
+      .section-p {
+        font-size: 0.88rem;
+      }
+
+      .exp-card,
+      .res-card,
+      .proj-card,
+      .cert-card,
+      .skill-group {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .mini-stats {
+        justify-content: center;
+      }
+
+      .mini-stat {
+        min-width: 75px;
+        padding: 0.7rem 0.9rem;
+      }
+
+      .proj-thumb {
+        height: 110px;
+        font-size: 2rem;
+      }
+
+      .strip-inner {
+        gap: 1.5rem;
+      }
+
+      .strip-item {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+      }
+
+      .cc {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .modal-box {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .modal-header {
+        padding: 1rem;
+      }
+
+      .modal-body {
+        padding: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .modal-body table {
+        font-size: 0.75rem;
+      }
+
+      .modal-body th,
+      .modal-body td {
+        padding: 0.35rem;
+      }
+    }
+
+    /* Mobile overlay backdrop */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 104;
+    }
+
+    .nav-overlay.open {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+  <nav>
+    <div class="logo"><span>M</span>iad.</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Career</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="btn-talk" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's
+      Talk</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="hero-left">
+      <h1><span class="hi">Hey!</span></h1>
+      <h1><span class="hi">I'm Miad</span></h1>
+      <div class="hero-typed-wrap"><span id="typed"></span><span class="cursor"></span></div>
+      <p class="hero-desc">“Curious enough to find the real problem. Stubborn enough to actually solve it.”</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get in Touch &rarr;</a>
+        <a href="#projects" class="btn-outline">View Work</a>
+        <a href="img/CV_Miad.pdf" class="btn-outline" id="downloadCV" target="_blank" download>&#128196; Download CV</a>
+      </div>
+      <div class="socials">
+        <a href="mailto:binmostafizmiad@gmail.com" class="social-btn" title="Email">@</a>
+        <a href="tel:+8801789530853" class="social-btn" title="Phone">#</a>
+        <a href="https://www.linkedin.com/in/miad-bin-mostafiz-2393011a0/" class="social-btn" title="LinkedIn">in</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <div class="hero-img-box">
+          <div class="hero-placeholder">
+            <div class="avatar-big"><img src="miad.jfif" alt="miad" class="avatar-big-img"></div>
+          </div>
+        </div>
+        <div class="hero-ring"></div>
+        <div class="hero-ring2"></div>
+        <div class="hero-badge">
+          <span class="hb-num">MIAD BIN MOSTAFIZ</span>
+          Solution Consultant
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="strip-inner">
+      <span class="strip-item">Supply Chain</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Lean Manufacturing</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">ERP Systems</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Process Optimization</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">DMAIC / Six Sigma</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Power BI</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">TOPSIS &bull; ISM</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Industrial Engineering</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Supply Chain</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Lean Manufacturing</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">ERP Systems</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Process Optimization</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">DMAIC / Six Sigma</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Power BI</span><span class="strip-item">&bull;</span>
+      <span class="strip-item">Industrial Engineering</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-left fade-up">
+      <div class="about-img-box">
+        <div class="about-avatar"><img src="ac3.jpg" alt="miad" class="avatar-big-img"></div>
+        <div class="about-ring">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="about-right fade-up">
+      <div class="section-tag">About Me</div>
+      <h2 class="section-h2yyy">Where Engineering Meets <span class="accent">Reality</span></h2>
+      <p class="section-p">I grew up in Barishal. I chose Industrial Engineering because it's fundamentally about one
+        question: <strong>why isn't this working as well as it could?</strong> That question is harder to answer than it
+        sounds — and it never stays inside factories.</p>
+      <p class="section-p">I've followed it into beverage plants trying to find where throughput was bleeding. Into
+        supply chain models mapping why 40% of Bangladesh's mango harvest never reaches a consumer. Into boardrooms
+        where a company had bought a perfectly good digital solution and wasn't using it — because the gap between
+        software and operations is a human problem, not a technical one.</p>
+      <p class="section-p">That gap is what I work in. Right now, I consult on B2B digital solutions for manufacturing —
+        which means I sit with engineers and operators, figure out what's actually broken, translate that into something
+        buildable, and stay until it works. Most people hand off at the proposal stage. I don't.</p>
+      <p class="section-p">I'm not trying to be the person who knows everything about any single thing. I'm trying to be
+        the person who can look at a system, see what's wrong, and move it.</p>
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="ms-num">3.77</div>
+          <div class="ms-lbl">CGPA</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-num">25+</div>
+          <div class="ms-lbl">Leads</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-num">2%</div>
+          <div class="ms-lbl">Productivity Gain</div>
+        </div>
+        <div class="mini-stat">
+          <div class="ms-num">7+</div>
+          <div class="ms-lbl">Certifications</div>
+        </div>
+      </div>
+      <a href="#contact" class="btn-primary">Connect with Me &rarr;</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="section-header fade-up">
+      <div class="section-tag">Career</div>
+      <h2 class="section-h2">Professional <span class="accent">Experience</span></h2>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.5rem;">Click any card to view full details.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card card-interactive fade-up" onclick="openModal('exp1')">
+        <div class="exp-line"></div>
+        <div class="exp-card-top">
+          <div>
+            <div class="exp-role">Solution Consultant</div>
+            <div class="exp-co">Diverzent</div>
+          </div>
+          <span class="exp-dt">June 2025 – Present</span>
+        </div>
+        <p class="exp-desc">B2B solution consulting for manufacturing — I sell the solution and implement it. ERP,
+          planning tools, ESG. 25 qualified leads, 20% client base growth, 2% productivity gain delivered.</p>
+      </div>
+
+      <div class="exp-card card-interactive fade-up" onclick="openModal('exp2')">
+        <div class="exp-line"></div>
+        <div class="exp-card-top">
+          <div>
+            <div class="exp-role">Management Trainee Officer</div>
+            <div class="exp-co">Urmi Group</div>
+          </div>
+          <span class="exp-dt">Jul 2024 – Jan 2025</span>
+        </div>
+        <p class="exp-desc">Embedded in one of Bangladesh's largest garments operations — managing material flow via ERP
+          and IMS, supporting line balancing, time studies, QA, and real-time productivity analysis.</p>
+      </div>
+
+      <div class="exp-card card-interactive fade-up" onclick="openModal('exp3')">
+        <div class="exp-line"></div>
+        <div class="exp-card-top">
+          <div>
+            <div class="exp-role">Internship</div>
+            <div class="exp-co">BITAC</div>
+          </div>
+          <span class="exp-dt">May – Aug 2023</span>
+        </div>
+        <p class="exp-desc">Hands-on process engineering: CNC, lathe, milling, fabrication, heat treatment. The kind of
+          training that grounds you in what manufacturing actually is.</p>
+      </div>
+
+      <div class="exp-card card-interactive fade-up" onclick="openModal('exp4')">
+        <div class="exp-line"></div>
+        <div class="exp-card-top">
+          <div>
+            <div class="exp-role">Internship</div>
+            <div class="exp-co">Bay Rubber Ltd.</div>
+          </div>
+          <span class="exp-dt">June 2022</span>
+        </div>
+        <p class="exp-desc">Observed supply chain workflows and manufacturing processes in a rubber footwear production
+          unit. My earliest look at how physical goods move.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="research-sec" id="education">
+    <div class="section-header fade-up">
+      <div class="section-tag">Academia</div>
+      <h2 class="section-h2">My <span class="accent">Education</span></h2>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.5rem;">Click any card to view full details.</p>
+    </div>
+    <div class="edu-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;">
+      <div class="res-card card-interactive fade-up" onclick="openModal('edu1')"
+        style="flex:1 1 320px;max-width:480px;">
+        <div class="res-badge">BSc in IPE</div>
+        <div class="res-title">BSc in Industrial and Production Engineering</div>
+        <p class="res-desc">NITER, University of Dhaka (2018–2023). CGPA 3.77/4.00 — with a 4.00 GPA in the final year's
+          first term and a consistent upward trajectory across all eight semesters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-sec" id="skills">
+    <div class="section-header fade-up">
+      <div class="section-tag">Capabilities</div>
+      <h2 class="section-h2">My <span class="accent">Skills</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group fade-up">
+        <div class="sg-head">
+          <div class="sg-icon">&#9881;</div>
+          <div class="sg-title">Engineering & Methodology</div>
+        </div>
+        <div class="sg-items">
+          <div class="sg-item">
+            <div class="sg-dot"></div>Lean Six Sigma & DMAIC
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Theory of Constraints & OEE
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>MCDM & Operations Research
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Line Balancing & Time Studies
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Process Optimization
+          </div>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <div class="sg-head">
+          <div class="sg-icon">&#128202;</div>
+          <div class="sg-title">Tech & Data Tools</div>
+        </div>
+        <div class="sg-items">
+          <div class="sg-item">
+            <div class="sg-dot"></div>ERP Systems
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Power BI & SQL
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Advanced Excel & MS Visio
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Inventory Management Systems
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Python (in progress)
+          </div>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <div class="sg-head">
+          <div class="sg-icon">&#128196;</div>
+          <div class="sg-title">Consulting & Business</div>
+        </div>
+        <div class="sg-items">
+          <div class="sg-item">
+            <div class="sg-dot"></div>B2B Solution Consulting
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Sales Engineering
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Client Workshop Facilitation
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Implementation Management
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Change Management & ESG
+          </div>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <div class="sg-head">
+          <div class="sg-icon">&#127775;</div>
+          <div class="sg-title">Soft Skills</div>
+        </div>
+        <div class="sg-items">
+          <div class="sg-item">
+            <div class="sg-dot"></div>Communication
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Leadership
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Emotional Intelligence
+          </div>
+          <div class="sg-item">
+            <div class="sg-dot"></div>Critical Thinking
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="research-sec" id="research">
+    <div class="section-header fade-up">
+      <div class="section-tag">Academic Work</div>
+      <h2 class="section-h2">My <span class="accent">Research</span></h2>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.5rem;">Click any card to view full details.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res-card card-interactive fade-up" onclick="openModal('res1')">
+        <div class="res-badge">Thesis</div>
+        <div class="res-title">Enhancing Efficiency in a Semi-Automated Beverage Industry</div>
+        <p class="res-desc">An IoT-integrated operational framework that reduced machine downtime by 17% and improved
+          bottleneck throughput by 14% — without a single taka of capital investment. Under review for publication.</p>
+      </div>
+
+      <div class="res-card card-interactive fade-up" onclick="openModal('res2')">
+        <div class="res-badge">Published Paper</div>
+        <div class="res-title">Multi-Criteria Decision Making for Fresh Mango Supply Chain Risk Management</div>
+        <p class="res-desc">Bangladesh loses 35–40% of its perishable goods before they reach the consumer. This study
+          mapped 27 risks across the fresh mango supply chain and identified strategies that can reduce waste by 15%.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-sec" id="projects">
+    <div class="section-header fade-up">
+      <div class="section-tag">My Work</div>
+      <h2 class="section-h2">Recent <span class="accent">Projects</span></h2>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.5rem;">Click any card to view full details.</p>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card card-interactive fade-up" onclick="openModal('proj1')">
+        <div class="proj-thumb">&#128187;</div>
+        <div class="proj-body">
+          <div class="proj-type">Implementation Consulting</div>
+          <div class="proj-name">AI-Assisted Planning Solution</div>
+          <p class="proj-desc">Took a planning solution from architecture to adoption — translating factory operations
+            into technical requirements, navigating migration, and delivering a 2% productivity gain.</p>
+        </div>
+      </div>
+
+      <div class="proj-card card-interactive fade-up" onclick="openModal('proj2')">
+        <div class="proj-thumb">&#128266;</div>
+        <div class="proj-body">
+          <div class="proj-type">Hardware / IoT</div>
+          <div class="proj-name">Excessive Sound Notifier</div>
+          <p class="proj-desc">Designed and built a hardware device that detects harmful noise levels in industrial
+            environments and alerts workers through color-coded LED indicators.</p>
+        </div>
+      </div>
+
+      <div class="proj-card card-interactive fade-up" onclick="openModal('proj3')">
+        <div class="proj-thumb">&#128200;</div>
+        <div class="proj-body">
+          <div class="proj-type">Data Analytics</div>
+          <div class="proj-name">Interactive Sales Dashboard</div>
+          <p class="proj-desc">Analyzed a sales dataset and built an interactive dashboard that turns raw numbers into
+            decisions — filters, trends, and business insights in one view.</p>
+        </div>
+      </div>
+
+      <div class="proj-card card-interactive fade-up" onclick="openModal('proj4')">
+        <div class="proj-thumb">&#9749;</div>
+        <div class="proj-body">
+          <div class="proj-type">Power BI</div>
+          <div class="proj-name">Coffee Shop Business Analysis</div>
+          <p class="proj-desc">Conducted a full business analysis for a local coffee shop using Power BI — identifying
+            performance gaps and presenting data-backed recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="cert-sec" id="certifications">
+    <div class="section-header fade-up">
+      <div class="section-tag">Credentials</div>
+      <h2 class="section-h2">Courses &amp; <span class="accent">Certifications</span></h2>
+      <p style="color:var(--muted); font-size:0.85rem; margin-top:0.5rem;">Click any card to view full details.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card card-interactive fade-up" onclick="openModal('cert1')">
+        <div class="cert-ico">&#128202;</div>
+        <div>
+          <div class="cert-name">Data Analysis: Excel, Power BI, SQL, Python</div>
+          <div class="cert-desc">Data Solution 360 | In Progress</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('cert2')">
+        <div class="cert-ico">&#127775;</div>
+        <div>
+          <div class="cert-name">Leadership & Emotional Intelligence</div>
+          <div class="cert-desc">Indian School of Business (Coursera)</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('cert3')">
+        <div class="cert-ico">&#127981;</div>
+        <div>
+          <div class="cert-name">Digital Manufacturing & Design</div>
+          <div class="cert-desc">SUNY (Coursera)</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('cert4')">
+        <div class="cert-ico">&#128196;</div>
+        <div>
+          <div class="cert-name">Engineering Project Management</div>
+          <div class="cert-desc">Coursera</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('cert5')">
+        <div class="cert-ico">&#9881;</div>
+        <div>
+          <div class="cert-name">Intelligent Machining</div>
+          <div class="cert-desc">Coursera</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('cert6')">
+        <div class="cert-ico">&#128268;</div>
+        <div>
+          <div class="cert-name">Introduction to IoT</div>
+          <div class="cert-desc">Coursera</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXTRACURRICULARS -->
+  <section class="research-sec" id="extras">
+    <div class="section-header fade-up">
+      <div class="section-tag">Beyond Work</div>
+      <h2 class="section-h2">Extra<span class="accent">curriculars</span></h2>
+    </div>
+
+    <div class="proj-grid">
+      <div class="cert-card card-interactive fade-up" onclick="openModal('ext1')"
+        style="flex: 1 1 260px; max-width: 380px;">
+        <div>
+          <div class="cert-name" style="font-size: 1rem; margin-bottom:0.5rem;">NITER Science Society — Secretary, 2023
+          </div>
+          <div class="cert-desc">Led a campus-wide science society — organizing events, coordinating with faculty, and
+            driving cross-disciplinary initiatives.</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('ext2')"
+        style="flex: 1 1 260px; max-width: 380px;">
+        <div>
+          <div class="cert-name" style="font-size: 1rem; margin-bottom:0.5rem;">BIHRM Supply Chain Case Study</div>
+          <div class="cert-desc">Competed in a national supply chain case study organized by BIHRM. Ranked 6th.</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('ext3')"
+        style="flex: 1 1 260px; max-width: 380px;">
+        <div>
+          <div class="cert-name" style="font-size: 1rem; margin-bottom:0.5rem;">NASA Space Apps Challenge</div>
+          <div class="cert-desc">Participated in NASA's global hackathon two years running (2020 & 2021).</div>
+        </div>
+      </div>
+      <div class="cert-card card-interactive fade-up" onclick="openModal('ext4')"
+        style="flex: 1 1 260px; max-width: 380px;">
+        <div>
+          <div class="cert-name" style="font-size: 1rem; margin-bottom:0.5rem;">Hult Prize — Top 10, Intra-Campus</div>
+          <div class="cert-desc">Global social entrepreneurship competition addressing world problems (2020).</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section class="skills-sec" id="hobbies">
+    <div class="section-header fade-up">
+      <div class="section-tag">Off the Clock</div>
+      <h2 class="section-h2">My <span class="accent">Hobbies</span></h2>
+    </div>
+    <div class="hobbies-grid fade-up" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;">
+      <div class="hobby-item" onclick="openModal('mob1')"
+        style="background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;flex:1 1 130px;max-width:160px;cursor:pointer;transition:transform .3s, border-color .3s;">
+        <div style="font-size:2.2rem;margin-bottom:.5rem;">&#128247;</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);">Photography
+        </div>
+      </div>
+      <div class="hobby-item" onclick="openModal('mob1')"
+        style="background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;flex:1 1 130px;max-width:160px;cursor:pointer;transition:transform .3s, border-color .3s;">
+        <div style="font-size:2.2rem;margin-bottom:.5rem;">&#129504;</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);">Philosophy</div>
+      </div>
+      <div class="hobby-item" onclick="openModal('mob1')"
+        style="background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;flex:1 1 130px;max-width:160px;cursor:pointer;transition:transform .3s, border-color .3s;">
+        <div style="font-size:2.2rem;margin-bottom:.5rem;">&#9992;</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);">Travel</div>
+      </div>
+      <div class="hobby-item" onclick="openModal('mob1')"
+        style="background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;flex:1 1 130px;max-width:160px;cursor:pointer;transition:transform .3s, border-color .3s;">
+        <div style="font-size:2.2rem;margin-bottom:.5rem;">&#127947;</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);">Gym</div>
+      </div>
+      <div class="hobby-item" onclick="openModal('mob1')"
+        style="background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;flex:1 1 130px;max-width:160px;cursor:pointer;transition:transform .3s, border-color .3s;">
+        <div style="font-size:2.2rem;margin-bottom:.5rem;">&#127860;</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);">Food</div>
+      </div>
+      <div class="hobby-item" onclick="openModal('mob1')"
+        style="background:var(--navy2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;flex:1 1 130px;max-width:160px;cursor:pointer;transition:transform .3s, border-color .3s;">
+        <div style="font-size:2.2rem;margin-bottom:.5rem;">&#127758;</div>
+        <div style="font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:var(--white);">Exploration
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-sec" id="contact">
+    <div class="section-tag" style="margin:0 auto 1rem;display:inline-block">Contact</div>
+    <h2 class="section-h2">Let's <span class="accent">Connect</span></h2>
+    <p style="color:var(--muted);font-size:.95rem;margin-top:.5rem">Open to consulting, collaborations, and
+      conversations about manufacturing, process improvement, and digital transformation.</p>
+    <div class="contact-grid">
+      <div class="cc">
+        <div class="cc-ico">&#9993;</div>
+        <div>
+          <div class="cc-lbl">Email</div>
+          <div class="cc-val">binmostafizmiad@gmail.com</div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-ico">&#128241;</div>
+        <div>
+          <div class="cc-lbl">Phone</div>
+          <div class="cc-val">+880 1789 530853</div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-ico">&#128205;</div>
+        <div>
+          <div class="cc-lbl">Location</div>
+          <div class="cc-val">Dhaka, Bangladesh</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><span>M</span>iad Bin Mostafiz</div>
+    <p>B.Sc. IPE &bull; Solution Consultant &bull; Dhaka, Bangladesh</p>
+    <p style="font-size:.75rem;color:var(--muted)">&copy; <a href="https://www.linkedin.com/company/109911346">2026
+        M23ITSOLUTION</a></p>
+  </footer>
+
+  <!-- MODAL CONTAINER -->
+  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Details</div>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const roles = ['Solution Consultant', 'Industrial Engineer', 'Digitization Specialist', 'Process Optimizer', 'Researcher'];
+    let ri = 0, ci = 0, del = false;
+    const el = document.getElementById('typed');
+    function type() {
+      const w = roles[ri];
+      if (del) {
+        el.textContent = w.substring(0, ci--);
+        if (ci < 0) { del = false; ri = (ri + 1) % roles.length; setTimeout(type, 300); }
+        else setTimeout(type, 30);
+      } else {
+        el.textContent = w.substring(0, ci++);
+        if (ci > w.length) { del = true; setTimeout(type, 1500); }
+        else setTimeout(type, 60);
+      }
+    }
+    setTimeout(type, 800);
+
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }) }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    /* MODAL LOGIC */
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    const modalData = {
+      'exp1': {
+        title: 'Solution Consultant | Diverzent',
+        html: `
+        <p><strong>Diverzent</strong> sells and implements digital solutions — ERP, operational planning, IE tools, ESG platforms — tailored to manufacturing clients. My role covers the full cycle: identify the pain, close the deal, and deliver the implementation.</p>
+        <ul>
+          <li>Generated 25 qualified leads through targeted market analysis, expanding the client base by 20% over seven months.</li>
+          <li>Led process deep-dive workshops with clients to surface operational inefficiencies rooted in real floor data.</li>
+          <li>Implemented a planning solution that delivered a 2% productivity gain.</li>
+          <li>Supporting supply chain digitization and process automation initiatives.</li>
+        </ul>
+        <p><strong>Technical scope:</strong> ERP, Operational Planning, IE Tools, ESG Reporting.</p>
+        <p><em>What's different here: most sales engineers hand off to implementation. I don't. I stay until the solution works.</em></p>
+        `
+      },
+      'exp2': {
+        title: 'Management Trainee Officer | Urmi Group',
+        html: `
+        <img src="img/Urmi Group.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p><strong>Urmi Group</strong> is a large-scale garments operation. I wasn't observing — I was doing.</p>
+        <ul>
+          <li>Managed end-to-end flow of garments, trims, and accessories using ERP and Inventory Management Systems.</li>
+          <li>Supported production scheduling through line balancing and time studies.</li>
+          <li>Assisted QA operations and defect root cause analysis across embroidery, trims, and cut panels.</li>
+          <li>Gained real-time capacity management and productivity analysis exposure.</li>
+        </ul>
+        <p><em>What I took away: a clear understanding of why manufacturing clients struggle to digitize — and what needs to change operationally before any tool actually helps.</em></p>
+        `
+      },
+      'exp3': {
+        title: 'Internship | BITAC \u2014 Bangladesh Industrial Technical Assistance Center',
+        html: `
+        <img src="img/Internship Certificate BITAC.jpg" style="float:right;width:35%;max-width:260px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        <p>One month. Seven sections. A machine for almost everything you can imagine doing to metal. BITAC is where an industrial engineer gets honest \u2014 because you can't theorize your way through a lathe.</p>
+        <p>BITAC (Tejgaon Industrial Area, Dhaka) is a government-run technical centre that runs job-shop production for industries that can't justify owning precision machinery. Every order is custom. Every part is inspected 100%. The environment is built around doing things right, slowly, the first time.</p>
+        <h4>What I trained on:</h4>
+        <ul>
+          <li><strong>Conventional Machining (MT Light & Heavy):</strong> Center lathes, turret lathes, universal & vertical milling machines, surface & cylindrical grinding, hobbing, jig boring, horizontal & vertical shapers. Not watched \u2014 operated. Understanding what these machines do physically changes how you think about process design.</li>
+          <li><strong>CNC Operations (TTI & CNC Unit 1 & 2):</strong> Haas VF4 and VF6 milling machines, ST20 CNC lathe, CNC EDM and Wire EDM, CNC internal/external/surface grinders, and 3D printing. G-code, M-code, coordinate setup. The gap between CNC capability and how most factories use it became very obvious here.</li>
+          <li><strong>Welding & Fabrication:</strong> TIG, arc, gas, and resistance/spot welding. Sheet shearing, power rolling, bending, bench and radial drilling. The fabrication section ran custom projects \u2014 I was in the shop while a fertilizer company component was being fabricated.</li>
+          <li><strong>Heat Treatment:</strong> Semi-muffle gas furnace, electric superheat furnace, tempering furnace, salt bath furnace. Observed carburizing (950\u20131000\u00B0C), hardening, annealing, and tempering processes. Hardness verified on a Rockwell testing machine post-treatment.</li>
+          <li><strong>Foundry & Pattern:</strong> Four furnace types \u2014 cupola, induction, tilted, and crucible \u2014 handling ferrous and non-ferrous metals. Pattern production via CNC router, lathe, and woodworking machines. Sand casting mix ratios, molding sand composition, and cost allocation in job-shop foundry work.</li>
+          <li><strong>Automobile & Maintenance:</strong> Diesel and petrol engine systems \u2014 compression-ignition cycle, fuel, lubricant, cooling, suspension. Practical scheduled maintenance routines: greasing, bearing replacement, controller checks. Understanding why machines break before they do.</li>
+          <li><strong>Quality Control:</strong> BITAC runs 100% inspection \u2014 no sampling. Every spare part gets dimensional inspection (micrometers, calipers, CMMs) and visual inspection against defined standards. When precision is the product, there's no shortcut.</li>
+        </ul>
+        <h4>What I actually took away:</h4>
+        <p>BITAC operates a flexible manufacturing system \u2014 custom parts, job-shop flow, no mass production. The Production Control Division (PCD) designs the process sequence in SolidWorks, schedules manufacturing across sections, and only contacts the client when the part is done. The Industrial Engineering Division handles customer intake, cost analysis, and sourcing. Watching that system function \u2014 order to gate pass \u2014 was more instructive than most classroom operations management content.</p>
+        <p>The real lesson wasn't the machines. It was understanding that manufacturing quality is a system decision, not a QC decision. When every step is precise, the inspection at the end is a formality.</p>
+        `
+      },
+      'exp4': {
+        title: 'Internship | Bay Rubber Ltd.',
+        html: `
+        <img src="img/Internship Certificate BAY.jpg" style="float:right;width:35%;max-width:260px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        <p>Bay Rubber Ltd. is a joint venture with Stella International Holdings (Hong Kong), founded in 2001 in Konabari, Gazipur. 100% export-oriented \u2014 footwear going mainly to Europe and East Asia. Annual production capacity: 3.4 million units. Revenue: ~\u09F350 million. Net profit: ~\u09F312 million.</p>
+        <p>This was two weeks. Short, but it was my first time inside a real production facility \u2014 and the first time I understood that manufacturing is a logistics problem as much as a process problem.</p>
+        <h4>Production systems observed:</h4>
+        <ul>
+          <li><strong>Sandal (EVA):</strong> Raw rubber mixed with chemical compound in a Kneader machine \u2192 sulphur added via double-roller \u2192 horizontal cut at Calender Roller \u2192 vertical cut at Cooling & Cutting Machine \u2192 hydraulic press for EVA sheet production \u2192 molded cutting knife for sole shape \u2192 drilling, strap insertion, labelling. The process is linear and volume-dependent. Any machine downtime hits every step downstream.</li>
+          <li><strong>PVC:</strong> Direct injection process \u2014 PVC resin powder injected into molds to produce outsoles. Speed-focused. Tight quality checks on hardness and finish before assembly.</li>
+          <li><strong>Keds:</strong> Steel die cutting \u2192 stacking \u2192 stitching department \u2192 bonding upper to outsole. The stitching section was where most quality issues surfaced \u2014 operator-dependent, hard to standardize.</li>
+          <li><strong>Rubber Sole:</strong> Vulcanization \u2014 sulfur bonds with rubber at controlled temperature to create a hardened sole. The chemistry is simple; controlling the timing and heat uniformly is not.</li>
+        </ul>
+        <h4>Supply chain and material flow:</h4>
+        <p>BRL runs a multi-source supply chain: rubber from Bangladesh, Vietnam, China and Japan (cargo ship); EVA and PVC resin from China; nylon mesh, velcro, adhesive from India. Lead times are significant \u2014 the planning has to account for it. Locally, foam and some base materials move by truck. Air cargo is avoided except for genuine emergencies given cost.</p>
+        <p>The procurement follows a seven-step cycle from need identification to invoice audit. Annual rubber requirement: ~150 tons. EVA: ~12,000 tons \u2014 though both are order-dependent. The inventory team held raw materials, WIP, and finished goods across separate storage zones with dedicated tracking.</p>
+        <h4>Quality and safety observations:</h4>
+        <p>QA covers five stages: preproduction audit, chemical test, raw material mixing audit, end-line audit, and finishing audit. 100% of showroom and wholesale output is inspected. Safety was real \u2014 metal gloves for rubber sheet cutting, dust masks for powder handling, charcoal masks near solvent stations, safety glass throughout. Fire exits, alarms, and extinguishers on every floor. Not decoration \u2014 actively maintained.</p>
+        <h4>What I actually took away:</h4>
+        <p>The Kneader machine, the Calender Roller, the hydraulic press \u2014 none of them were the interesting part. The interesting part was watching how a two-week production delay in one raw material ripples through scheduling, line balancing, and shipment commitments. And understanding that a 100% export-oriented facility lives and dies by its supply chain discipline, not just its floor efficiency. That framing stayed with me.</p>
+        `
+      },
+      'edu1': {
+        title: 'BSc in Industrial and Production Engineering',
+        html: `
+        <table>
+          <tr><th>Term</th><th>GPA</th></tr>
+          <tr><td>Level 1 \u2014 Term 1</td><td>3.28</td></tr>
+          <tr><td>Level 1 \u2014 Term 2</td><td>3.88</td></tr>
+          <tr><td>Level 2 \u2014 Term 1</td><td>3.53</td></tr>
+          <tr><td>Level 2 \u2014 Term 2</td><td>3.64</td></tr>
+          <tr><td>Level 3 \u2014 Term 1</td><td>3.89</td></tr>
+          <tr><td>Level 3 \u2014 Term 2</td><td>3.95</td></tr>
+          <tr><td>Level 4 \u2014 Term 1</td><td>4.00</td></tr>
+          <tr><td>Level 4 \u2014 Term 2</td><td>3.98</td></tr>
+          <tr><td><strong>Cumulative (CGPA)</strong></td><td><strong>3.77 / 4.00</strong></td></tr>
+        </table>
+        <p>The degree covered the full stack of industrial engineering \u2014 from fundamentals to advanced systems. The courses that shaped my work most directly:</p>
+        <h4>Key Coursework:</h4>
+        <ul>
+          <li><strong>Operations & Planning:</strong> Operations Research \u2022 Operations Management I & II \u2022 Supply Chain Management \u2022 Facilities Planning & Materials Handling \u2022 System Modeling & Simulation</li>
+          <li><strong>Process & Quality:</strong> Quality Control & Management \u2022 Manufacturing Processes I & II \u2022 Ergonomics & Industrial Safety \u2022 Measurement & Instrumentation</li>
+          <li><strong>Manufacturing & Mechanical Engineering:</strong> Mechanics of Machinery \u2022 Mechanics of Solids \u2022 Fluid Mechanics & Machinery \u2022 Machine Tools & Machining \u2022 Automation & Robotics \u2022 Engineering Materials \u2022 Machine Drawing \u2022 CAD & Drafting \u2022 Product Design & Development</li>
+          <li><strong>Management & Business:</strong> Project Management \u2022 Organization Behavior \u2022 Marketing & Cost Management \u2022 Accounting & Finance for Management</li>
+        </ul>
+        <p><strong>Thesis (A+):</strong> Developed an Andon\u2013TPM framework using DMAIC methodology for bottleneck reduction in a semi-automated beverage plant. Result: 17% downtime reduction, 14% throughput improvement. Under review for publication.</p>
+        <img src="img/Provisional Certificate.jpg" style="display:block;margin:1rem auto;width:35%;max-width:280px;border-radius:8px;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+        
+        `
+      },
+      'res1': {
+        title: 'Enhancing Efficiency using Andon-TPM Framework',
+        html: `
+        <p>In semi-automated manufacturing, machines break down, operators don't know why, and maintenance shows up late. This thesis was built around one core question: how do you fix a bottleneck without spending money you don't have?</p>
+        <p>The study focused on a real beverage manufacturing facility where recurring machine failures were silently killing line performance. No structured monitoring. No coordination between operators and maintenance. No visibility — just repeated disruptions and missed targets.</p>
+        <p>The approach was built on three layers:</p>
+        <ul>
+          <li><strong>DMAIC</strong> provided the problem-solving backbone.</li>
+          <li><strong>Theory of Constraints (TOC)</strong> was used to locate and prioritize the single constraint.</li>
+          <li><strong>Lean manufacturing and TPM</strong> principles guided the solution design.</li>
+        </ul>
+        <p><strong>What was built:</strong> An Andon–TPM framework, IoT-integrated, designed to create real-time visibility between the shop floor and the maintenance team. The Andon system triggers immediate visual signals the moment a machine shows signs of abnormality. TPM structures the response.</p>
+        <h4>What it delivered:</h4>
+        <ul>
+          <li>17% reduction in downtime frequency at the bottleneck station</li>
+          <li>14% improvement in throughput at the bottleneck</li>
+          <li>Zero additional capital investment required</li>
+        </ul>
+        <p>The real contribution here isn't the numbers — it's the demonstration that semi-automated systems can be significantly improved through better system design and structured decision-making.</p>
+        <p><strong>Status:</strong> Under review for publication | <strong>Tools:</strong> DMAIC, TOC, Andon System, TPM, MS Visio, Lean</p>
+        `
+      },
+      'res2': {
+        title: 'Multi-Criteria Decision Making for Fresh Mango Supply Chain Risk Management',
+        html: `
+        <p>Mango is Bangladesh's most produced fruit, and a significant portion never reaches the consumer. The problem isn't production. It's harvest timing, uncontrolled temperatures, delayed transport, lack of traceability, and price instability. The risks are everywhere.</p>
+        <h4>What we did:</h4>
+        <p>We conducted on-the-ground surveys across the Chapainawabganj district. From that primary data, we identified 27 distinct risks spanning harvesting, packaging, storage, transportation, and retail.</p>
+        <p>Two MCDM methodologies were applied in sequence:</p>
+        <ul>
+          <li><strong>ISM & MICMAC</strong> mapped how these risks relate to and reinforce each other, identifying critical linkage risks.</li>
+          <li><strong>TOPSIS</strong> was used to rank mitigation strategies for each supply chain stage.</li>
+        </ul>
+        <h4>What the strategies deliver:</h4>
+        <table>
+          <tr><th>Stage</th><th>Best Strategy</th><th>Current Waste</th><th>Post-Mitigation</th></tr>
+          <tr><td>Harvesting</td><td>Variety-wise, timed harvesting</td><td>40 units / 100</td><td>14</td></tr>
+          <tr><td>Packaging</td><td>Fresh produce packaging (FIFO)</td><td>23</td><td>12</td></tr>
+          <tr><td>Storage</td><td>Monitoring & regular inspection</td><td>24</td><td>8</td></tr>
+          <tr><td>Transportation</td><td>Optimum route planning</td><td>31</td><td>16</td></tr>
+          <tr><td>Retail</td><td>Marketing policy, promotions & discount</td><td>17</td><td>9</td></tr>
+        </table>
+        <p>Overall: ~15% reduction in total mango waste across the supply chain — with direct financial implications for growers, distributors, and retailers.</p>
+        <p><strong>Published:</strong> Supply Chain Insider, Oct 2023 | <strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.10030834" target="_blank" style="color:var(--blue2);text-decoration:underline;">10.5281/zenodo.10030834</a></p>
+        `
+      },
+      'proj1': {
+        title: 'Implementation of AI-Assisted Planning Solution',
+        html: `
+        <p>Implementing a planning system in manufacturing isn't a software problem — it's a people and operations problem. The gap between what the technical team builds and what the factory actually needs is where implementations fail. That gap was my job to close.</p>
+        <h4>What I did:</h4>
+        <ul>
+          <li>Worked alongside developers to translate operational logic — scheduling rules, production constraints, exception handling — into a system architecture that holds up on the floor.</li>
+          <li>Owned the full data transformation: mapping old structures to the new system, cleaning inconsistencies, and ensuring operational continuity through the migration.</li>
+          <li>Delivered context-specific end-user training, built around real daily workflows — not generic demos.</li>
+          <li>Acted as the bridge between the client and the technical team through objections, scope changes, and resistance to change.</li>
+          <li>Consulted on standard work procedures post-go-live to ensure the system was being used at full value.</li>
+        </ul>
+        <p><strong>Outcome:</strong> 2% productivity gain</p>
+        <p><strong>Role:</strong> Implementation Consultant + Change Management | At: Diverzent</p>
+        `
+      },
+      'proj2': {
+        title: 'Excessive Sound Notifier Device',
+        html: `
+        <p>Noise-induced hearing damage is one of the most overlooked occupational health risks in manufacturing. This device was built to address it — not with signage or policy, but with a real-time alert system.</p>
+        <p>The Excessive Sound Notifier detects ambient noise levels, classifies them against occupational safety thresholds, and communicates risk to workers immediately through color-coded LED signals. No training required to understand it — the light tells you.</p>
+        <p>From concept to physical build: circuit design, sensor selection, component integration, and enclosure fabrication. A reminder that engineering is also about the people inside the factory, not just the output they produce.</p>
+        `
+      },
+      'proj3': {
+        title: 'Interactive Sales Dashboard',
+        html: `
+        <p>Raw sales data is noise. A well-built dashboard turns it into signal.</p>
+        <p>This project involved end-to-end data analysis of a sales dataset — cleaning, structuring, and building an interactive Excel and Power BI dashboard that allows stakeholders to slice performance by time period, product, and region. The goal wasn't a pretty chart — it was a tool that supports actual business decisions.</p>
+        `
+      },
+      'proj4': {
+        title: 'Coffee Shop Business Analysis',
+        html: `
+        <p>A small business analysis that treated a local coffee shop like a real client. Using Power BI, I analyzed operational and sales data to identify where the business was leaking value — and built a report that clearly communicated the findings to a non-technical audience.</p>
+        <p>The deliverable wasn't just a dashboard. It included concrete recommendations for improving operations, pricing, and demand patterns — the kind of output that's actually useful to a business owner.</p>
+        `
+      },
+      'cert1': { title: 'Data Analysis: Excel, Power BI, SQL, Python', html: '<p>Building end-to-end analytical capability — Excel for modeling, SQL for querying, Power BI for visualization, Python for automation. Currently in progress. (Provider: Data Solution 360)</p>' },
+      'cert2': { title: 'Leadership & Emotional Intelligence', html: '<img src="img/LEADERSHIP_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>How self-awareness, empathy, and relationship management translate into effective leadership — not abstract theory, but applied to real team dynamics. (Provider: Indian School of Business, Coursera)</p>' },
+      'cert3': { title: 'Digital Manufacturing & Design', html: '<img src="img/DM&D_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Industry 4.0 concepts — digital threads, smart factories, how data transforms manufacturing decision-making. (Provider: SUNY, Coursera)</p>' },
+      'cert4': { title: 'Engineering Project Management', html: '<img src="img/EPM_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Scope definition, stakeholder analysis, risk planning, charters and scheduling. The fundamentals of getting things done in structured environments. (Provider: Coursera)</p>' },
+      'cert5': { title: 'Intelligent Machining', html: '<img src="img/IM_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Sensors, data analytics, and machine learning applied to machining processes — predictive quality and performance optimization. (Provider: Coursera)</p>' },
+      'cert6': { title: 'Introduction to IoT', html: '<img src="img/IOT_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Architecture and application of connected devices across manufacturing, healthcare, and smart environments. (Provider: Coursera)</p>' },
+      'cert7': { title: 'Social Media Management', html: '<img src="img/SOCIAL MEDIA MANAGEMENT_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Content creation, metrics analysis, and brand engagement strategies. (Provider: Meta, Coursera)</p>' },
+      'ext1': { title: 'NITER Science Society (NSS) — Secretary, 2023', html: '<p>The NITER Science Society was the place where engineering students crossed disciplinary lines. As Secretary in 2023 (and Executive HR in 2022), I was responsible for event planning, faculty and industry coordination, and steering research initiatives across departments. First real experience of leading a team under real stakes — not a classroom exercise.</p>' },
+      'ext2': { title: 'BIHRM Supply Chain Case Study', html: '<img src="img/Case Compitition Certificate (3).png" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Competed in a national supply chain case study organized by BIHRM. Ranked 6th. This research also directly seeded the published mango supply chain paper.</p>' },
+      'ext3': { title: 'NASA Space Apps Challenge', html: '<img src="img/Certificate NASA SPACE APP_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Participated in NASA\'s global hackathon two years running — tackling real-world space and earth science challenges in 48-hour sprints.</p>' },
+      'ext4': { title: 'Hult Prize', html: '<img src="img/Miad Bin Mostafiz - hult 2021_page-0001.jpg" style="float:right;width:35%;max-width:280px;border-radius:8px;margin-left:1.5rem;margin-bottom:1rem;border:1px solid var(--border);padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.05);"><p>Reached the top 10 in the Hult Prize intra-campus round — a global social entrepreneurship competition challenging students to solve urgent world problems.</p>' },
+      'mob1': {
+        title: 'Hobbies',
+        html: `
+        <ul>
+          <li><strong>Photography:</strong> I find it slows you down in the best way. You stop moving and start actually looking. Most of my shots are candid — people, places, moments that would disappear if you blinked.</li>
+          <li><strong>Philosophy:</strong> Not academic philosophy. Just the habit of asking why something is the way it is before accepting it. It bleeds into how I approach problems at work more than I'd like to admit.</li>
+          <li><strong>Travel:</strong> Less about destinations, more about the friction of being somewhere unfamiliar. New places break your assumptions fast.</li>
+          <li><strong>Gym:</strong> Consistent, unglamorous, necessary. Teaches you that progress is mostly just not quitting.</li>
+          <li><strong>Food:</strong> Eating well is underrated. Trying new food in new places is one of the cheapest and most honest ways to understand a culture.</li>
+          <li><strong>Exploration:</strong> A catch-all for following curiosity wherever it goes. Some of my best ideas have come from places that had nothing to do with engineering.</li>
+        </ul>
+        `
+      }
+    };
+
+    function openModal(id) {
+      if (modalData[id]) {
+        modalTitle.textContent = modalData[id].title;
+        modalBody.innerHTML = modalData[id].html;
+        modal.classList.add('active');
+      }
+    }
+
+    function closeModal(e) {
+      if (e && e.target !== modal && e.type === 'click') return; // protect inner clicks
+      modal.classList.remove('active');
+    }
+    /* MOBILE NAV TOGGLE */
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+      document.getElementById('navOverlay').classList.toggle('open');
+    }
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('active');
+        document.getElementById('navOverlay').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+
+</html>
