@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miad Bin Mostafiz — IPE & Solution Consultant</title>
+  <title>Miad Bin Mostafiz — Technology & Innovation Management</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
     rel="stylesheet">
@@ -848,6 +848,26 @@
       line-height: 1.7
     }
 
+
+    /* EDUCATION */
+    .edu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .edu-grid > .res-card {
+      flex: 1 1 360px;
+      max-width: 460px;
+      margin: 0;
+    }
+
     /* PROJECTS */
     .projects-sec {
       padding: 5rem 5%
@@ -1504,10 +1524,20 @@
       }
 
       /* Override inline styles on extracurricular/hobbies cards */
-      .proj-grid>.cert-card,
-      .edu-grid>.res-card {
+      .proj-grid>.cert-card {
         flex: none !important;
         max-width: 500px !important;
+        width: 100%;
+      }
+
+      .edu-grid {
+        width: 100%;
+        gap: 1rem;
+      }
+
+      .edu-grid > .res-card {
+        flex: none;
+        max-width: 500px;
         width: 100%;
       }
 
@@ -1698,7 +1728,7 @@
       <h1><span class="hi">Hey!</span></h1>
       <h1><span class="hi">I'm Miad</span></h1>
       <div class="hero-typed-wrap"><span id="typed"></span><span class="cursor"></span></div>
-      <p class="hero-desc">“Curious enough to find the real problem. Stubborn enough to actually solve it.”</p>
+      <p class="hero-desc">“Bridging engineering, technology, and innovation to turn complex operational problems into practical solutions.”</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">Get in Touch &rarr;</a>
         <a href="#projects" class="btn-outline">View Work</a>
@@ -1722,7 +1752,7 @@
         <div class="hero-ring2"></div>
         <div class="hero-badge">
           <span class="hb-num">MIAD BIN MOSTAFIZ</span>
-          Solution Consultant
+          Technology & Innovation Management
         </div>
       </div>
     </div>
@@ -1765,26 +1795,27 @@
     <div class="about-right fade-up">
       <div class="section-tag">About Me</div>
       <h2 class="section-h2yyy">Where Engineering Meets <span class="accent">Reality</span></h2>
-      <p class="section-p">I grew up in Barishal. I chose Industrial Engineering because it's fundamentally about one
-        question: <strong>why isn't this working as well as it could?</strong> That question is harder to answer than it
-        sounds — and it never stays inside factories.</p>
-      <p class="section-p">I've followed it into beverage plants trying to find where throughput was bleeding. Into
-        supply chain models mapping why 40% of Bangladesh's mango harvest never reaches a consumer. Into boardrooms
-        where a company had bought a perfectly good digital solution and wasn't using it — because the gap between
-        software and operations is a human problem, not a technical one.</p>
-      <p class="section-p">That gap is what I work in. Right now, I consult on B2B digital solutions for manufacturing —
-        which means I sit with engineers and operators, figure out what's actually broken, translate that into something
-        buildable, and stay until it works. Most people hand off at the proposal stage. I don't.</p>
-      <p class="section-p">I'm not trying to be the person who knows everything about any single thing. I'm trying to be
-        the person who can look at a system, see what's wrong, and move it.</p>
+      
+      <p class="section-p">I'm an Industrial & Production Engineer with a growing focus on <strong>technology, innovation,
+        and digital transformation</strong>. My experience has taken me from manufacturing and process improvement to
+        working with digital solutions for industrial organizations.</p>
+      <p class="section-p">At Diverzent, I worked at the intersection of operations and technology — understanding
+        manufacturing problems, translating them into digital solutions, and working with clients through implementation.
+        I completed that professional chapter in <strong>July 2026</strong>.</p>
+      <p class="section-p">Now, I'm continuing that journey in Germany as a <strong>Master's student in Technology &
+        Innovation Management at Hochschule Harz</strong>. I'm interested in how organizations identify emerging
+        technologies, turn ideas into practical innovation, and manage the change required to make new systems work.</p>
+      <p class="section-p">My goal is to build on my engineering foundation and industry experience to work where
+        <strong>technology, business, and systems thinking meet</strong> — helping organizations turn new ideas and
+        technologies into meaningful, practical outcomes.</p>
       <div class="mini-stats">
         <div class="mini-stat">
           <div class="ms-num">3.77</div>
           <div class="ms-lbl">CGPA</div>
         </div>
         <div class="mini-stat">
-          <div class="ms-num">25+</div>
-          <div class="ms-lbl">Leads</div>
+          <div class="ms-num">2026</div>
+          <div class="ms-lbl">Master's Started</div>
         </div>
         <div class="mini-stat">
           <div class="ms-num">2%</div>
@@ -1814,7 +1845,7 @@
             <div class="exp-role">Solution Consultant</div>
             <div class="exp-co">Diverzent</div>
           </div>
-          <span class="exp-dt">June 2025 – Present</span>
+          <span class="exp-dt">June 2025 – July 2026</span>
         </div>
         <p class="exp-desc">B2B solution consulting for manufacturing — I sell the solution and implement it. ERP,
           planning tools, ESG. 25 qualified leads, 20% client base growth, 2% productivity gain delivered.</p>
@@ -1868,15 +1899,25 @@
       <h2 class="section-h2">My <span class="accent">Education</span></h2>
       <p style="color:var(--muted); font-size:0.85rem; margin-top:0.5rem;">Click any card to view full details.</p>
     </div>
-    <div class="edu-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;">
-      <div class="res-card card-interactive fade-up" onclick="openModal('edu1')"
-        style="flex:1 1 320px;max-width:480px;">
+
+    <div class="edu-grid">
+      <div class="res-card card-interactive fade-up" onclick="openModal('edu-masters')">
+        <div class="res-badge">Master's • Current</div>
+        <div class="res-title">Master's in Technology & Innovation Management</div>
+        <p class="res-desc">Hochschule Harz — Wernigerode, Germany (September 2026 – Present). Focused on technology,
+          innovation, digital transformation, and the management of emerging technologies.</p>
+      </div>
+
+      <div class="res-card card-interactive fade-up" onclick="openModal('edu1')">
         <div class="res-badge">BSc in IPE</div>
         <div class="res-title">BSc in Industrial and Production Engineering</div>
         <p class="res-desc">NITER, University of Dhaka (2018–2023). CGPA 3.77/4.00 — with a 4.00 GPA in the final year's
           first term and a consistent upward trajectory across all eight semesters.</p>
       </div>
     </div>
+  </section>
+
+  <!-- SKILLS -->
   </section>
 
   <!-- SKILLS -->
@@ -2215,7 +2256,7 @@
         <div class="cc-ico">&#128205;</div>
         <div>
           <div class="cc-lbl">Location</div>
-          <div class="cc-val">Dhaka, Bangladesh</div>
+          <div class="cc-val">Wernigerode, Germany</div>
         </div>
       </div>
     </div>
@@ -2224,7 +2265,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo"><span>M</span>iad Bin Mostafiz</div>
-    <p>B.Sc. IPE &bull; Solution Consultant &bull; Dhaka, Bangladesh</p>
+    <p>Master's Student in Technology & Innovation Management &bull; Industrial Engineer &bull; Wernigerode, Germany</p>
     <p style="font-size:.75rem;color:var(--muted)">&copy; <a href="https://www.linkedin.com/company/109911346">2026
         M23ITSOLUTION</a></p>
   </footer>
@@ -2241,7 +2282,7 @@
   </div>
 
   <script>
-    const roles = ['Solution Consultant', 'Industrial Engineer', 'Digitization Specialist', 'Process Optimizer', 'Researcher'];
+    const roles = ['Technology & Innovation Management', 'Solution Consultant', 'Industrial Engineer', 'Digital Transformation', 'Researcher'];
     let ri = 0, ci = 0, del = false;
     const el = document.getElementById('typed');
     function type() {
@@ -2335,6 +2376,24 @@
         <p>QA covers five stages: preproduction audit, chemical test, raw material mixing audit, end-line audit, and finishing audit. 100% of showroom and wholesale output is inspected. Safety was real \u2014 metal gloves for rubber sheet cutting, dust masks for powder handling, charcoal masks near solvent stations, safety glass throughout. Fire exits, alarms, and extinguishers on every floor. Not decoration \u2014 actively maintained.</p>
         <h4>What I actually took away:</h4>
         <p>The Kneader machine, the Calender Roller, the hydraulic press \u2014 none of them were the interesting part. The interesting part was watching how a two-week production delay in one raw material ripples through scheduling, line balancing, and shipment commitments. And understanding that a 100% export-oriented facility lives and dies by its supply chain discipline, not just its floor efficiency. That framing stayed with me.</p>
+        `
+      },
+      'edu-masters': {
+        title: 'Master\'s in Technology & Innovation Management | Hochschule Harz',
+        html: `
+        <p><strong>Hochschule Harz</strong> — Wernigerode, Germany</p>
+        <p><strong>September 2026 – Present</strong></p>
+        <p>This Master's is the next step in my transition from industrial engineering and manufacturing systems
+        toward technology, innovation, and digital transformation.</p>
+        <h4>Areas of interest</h4>
+        <ul>
+          <li>Technology and innovation management</li>
+          <li>Digital transformation</li>
+          <li>Innovation strategy and implementation</li>
+          <li>Technology-driven organizational change</li>
+        </ul>
+        <p>The programme builds on my engineering and industry experience while developing my understanding of how
+        organizations evaluate, implement, and create value from new technologies.</p>
         `
       },
       'edu1': {
